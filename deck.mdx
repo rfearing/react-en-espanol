@@ -1,7 +1,10 @@
-import { css } from '@emotion/css'
+import { css } from '@emotion/css';
+import { CodeSurferColumns, CodeSurfer, Step } from "code-surfer";
 import { github, vsDark, nightOwl} from "@code-surfer/themes";
-import LessonOne from './barajas/actualizar-dom/lesson'
+import LessonOnePartOne from './barajas/actualizar-dom/lesson';
+import LessonOnePartTwo from './barajas/actualizar-dom/lesson-part-two';
 import { Head, Notes } from "mdx-deck";
+import { ListOne, ListTwo } from './components/List'
 
 export const theme = nightOwl;
 
@@ -51,4 +54,95 @@ export const theme = nightOwl;
 
 ---
 
-<LessonOne />
+<!-- LECCIÓN UNO: -->
+
+<LessonOnePartOne />
+
+---
+
+#### To see all the available Web Apis visit <br/> https://developer.mozilla.org/en-US/docs/Web/API
+
+---
+
+<LessonOnePartTwo />
+
+---
+
+<CodeSurferColumns themes={[nightOwl, vsDark]}>
+
+<Step>
+
+<ListOne />
+
+```html file="./barajas/actualizar-dom/html-plain.html"
+```
+
+</Step>
+
+<Step>
+
+<ListTwo />
+
+```html file="./barajas/actualizar-dom/html-plain.html" 19:25
+```
+
+</Step>
+
+<Step>
+
+### Another Web API we could use is the Fetch API! <br/> Let's use it to get some data from a server
+
+```html file="./barajas/actualizar-dom/html-plain.html" 19:25
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurfer theme={nightOwl}>
+
+```html
+<script>
+var lista = document.getElementById("lista");
+var nuevoElemento = document.createElement("li");
+var texto = document.createTextNode("Nuevo elemento");
+nuevoElemento.appendChild(texto);
+lista.appendChild(nuevoElemento);
+</script>
+```
+
+```html
+<script>
+var lista = document.getElementById("lista");
+var mas = fetch('https://frutas-frutas-frutas.com/api/frutas')
+	.then(response => response.json())
+	.catch(error => console.error('Error:', error));
+
+var nuevoElemento = document.createElement("li");
+var texto = document.createTextNode("Nuevo elemento");
+nuevoElemento.appendChild(texto);
+lista.appendChild(nuevoElemento);
+</script>
+```
+
+```html
+<script>
+var lista = document.getElementById("lista");
+var mas = fetch('https://frutas-frutas-frutas.com/api/frutas')
+	.then(response => response.json())
+	.catch(error => console.error('Error:', error));
+
+mas.map(function(fruta) {
+	var nuevoElemento = document.createElement("li");
+	var texto = document.createTextNode(fruta);
+	nuevoElemento.appendChild(texto);
+	lista.appendChild(nuevoElemento);
+});
+</script>
+```
+
+</CodeSurfer>
+
+---

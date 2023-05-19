@@ -1,13 +1,10 @@
 # Actualizar el DOM con JavaScript:
 
-When you visit a website, your browser will display a website that is made up of three syntaxes: HTML, CSS & Javascript. HTML provides structure and content, CSS provides styles and lastly JavaScript provides interactivity.
+When you visit a website, your browser will display HTML, CSS & Javascript. HTML provides structure and content, CSS provides styles and lastly JavaScript provides interactivity.
 
-Although JavaScript contains a lot of functionality on its own, it needs a little help from the browser to perform many of the features that we’re used to. To provide these native features, browsers have APIs built into them, called “Web APIs”
+In order to make changes to HTML, we utilize a data representation of the HTML (instead of editing the HTML directly). This representation is called the DOM, which stands for Document Object Model. When we make changes to the DOM, they are reflected in the HTML.
 
-Some examples:
-- Fetch API - to make network connections
-- HTML DOM API - to interact with HTML elements
-- URL API - to structure and parse URLs
+In order to utilize the DOM, browsers provide "Web APIs" which give native functionality to Javascript. The Web API to manipulate the DOM is called the "HTML DOM API." Other Web APIs include the Fetch API, to make network connections and the URL API to structure and parse URLs.
 
 Let’s take a look at how some of these would work:
 

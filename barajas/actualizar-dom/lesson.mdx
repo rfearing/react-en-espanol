@@ -1,19 +1,13 @@
 import { CodeSurferColumns, Step } from "code-surfer";
 import { vsDark, nightOwl } from "@code-surfer/themes";
-import { Notes } from "mdx-deck";
+import { Slide } from "mdx-deck"
 import DiapositivaUno from './diapositiva-uno';
 import DiapositivaTwo from './diapositiva-two';
 import DiapositivaThree from './diapositiva-three';
 import DiapositivaFour from './diapositiva-four';
+import LessonNotes from './notes';
 
-<Notes>
-  Testing out the notes functionality.
-  Notes are per slide (not per step).
-  <ul>
-    <li>Step 1</li>
-    <li>Step 2</li>
-  </ul>
-</Notes>
+<LessonNotes />
 
 <CodeSurferColumns themes={[nightOwl, vsDark]}>
 

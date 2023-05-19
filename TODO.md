@@ -1,2 +1,2 @@
-- [ ] Display slides on GitHub pages
+- [ ] Display slides with Heroku
 - [ ] Use GitHub Actions to run `npm run build`
