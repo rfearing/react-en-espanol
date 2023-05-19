@@ -1,0 +1,2 @@
+- [ ] Display slides on GitHub pages
+- [ ] Use GitHub Actions to run `npm run build`

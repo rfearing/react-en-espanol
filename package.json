@@ -2,11 +2,15 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "uno": "mdx-deck ./barajas/actualizar-dom/lesson.mdx"
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx"
   },
   "devDependencies": {
     "code-surfer": "3.1.0",
     "mdx-deck": "3.0.13"
   },
-  "name": "my-deck"
+  "name": "react-en-espanol",
+  "dependencies": {
+    "@emotion/css": "^11.11.0"
+  }
 }

@@ -1,0 +1,54 @@
+import { css } from '@emotion/css'
+import { github, vsDark, nightOwl} from "@code-surfer/themes";
+import LessonOne from './barajas/actualizar-dom/lesson'
+import { Head, Notes } from "mdx-deck";
+
+export const theme = nightOwl;
+
+<Head>
+	<title>Aprender React</title>
+  <meta name="twitter:title" content="Aprender React" />
+  <meta name="twitter:description" content="Primeros pasos con React y Javascript" />
+	<link rel="shortcut icon" type="image/svg+xml" href="https://cdn.worldvectorlogo.com/logos/react-1.svg" />
+</Head>
+
+<h1 className={css`text-align: center`}>
+	👋 ¡Bienvenidos a <br/> <i>Javascript y React</i>!
+</h1>
+
+<ul>
+	<li>
+		<a href="/1">
+			Actualizar el DOM con JavaScript
+		</a>
+	</li>
+	<li>
+		Primeros pasos con React
+	</li>
+	<li>
+		Fundamentos de Javascript para React
+	</li>
+	<li>
+		Conceptos básicos de React:
+	</li>
+	<li>
+		Mostrar datos con Props
+	</li>
+	<li>
+		Añadir interactividad con estado
+	</li>
+</ul>
+
+---
+
+<h3 style="text-align: center;">
+  Nuestro primero paso es aprender actualizar el DOM con JavaScript
+</h3>
+
+<Notes>
+	Example note one! Press option + P for presentor mode.
+</Notes>
+
+---
+
+<LessonOne />
