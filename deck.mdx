@@ -1,10 +1,11 @@
 import { css } from '@emotion/css';
-import { CodeSurferColumns, CodeSurfer, Step } from "code-surfer";
-import { github, vsDark, nightOwl} from "@code-surfer/themes";
-import LessonOnePartOne from './barajas/actualizar-dom/lesson';
-import LessonOnePartTwo from './barajas/actualizar-dom/lesson-part-two';
-import { Head, Notes } from "mdx-deck";
-import { ListOne, ListTwo } from './components/List'
+import { vsDark, nightOwl} from "@code-surfer/themes";
+import ActualizarDomUno from './barajas/actualizar-dom/parte-uno';
+import ActualizarDomDos from './barajas/actualizar-dom/parte-dos';
+import ActualizarDomTres from './barajas/actualizar-dom/parte-tres';
+// import ActualizarDomCuatro from './barajas/actualizar-dom/parte-cuatro';
+// import ActualizarDomCinco from './barajas/actualizar-dom/parte-cinco';
+import { Head } from "mdx-deck";
 
 export const theme = nightOwl;
 
@@ -48,15 +49,9 @@ export const theme = nightOwl;
   Nuestro primero paso es aprender actualizar el DOM con JavaScript
 </h3>
 
-<Notes>
-	Example note one! Press option + P for presentor mode.
-</Notes>
-
 ---
 
-<!-- LECCIÓN UNO: -->
-
-<LessonOnePartOne />
+<ActualizarDomUno />
 
 ---
 
@@ -64,85 +59,22 @@ export const theme = nightOwl;
 
 ---
 
-<LessonOnePartTwo />
+<ActualizarDomDos />
 
 ---
 
-<CodeSurferColumns themes={[nightOwl, vsDark]}>
+<ActualizarDomTres />
 
-<Step>
 
-<ListOne />
 
-```html file="./barajas/actualizar-dom/html-plain.html"
-```
-
-</Step>
-
-<Step>
-
-<ListTwo />
-
-```html file="./barajas/actualizar-dom/html-plain.html" 19:25
-```
-
-</Step>
-
-<Step>
-
-### Another Web API we could use is the Fetch API! <br/> Let's use it to get some data from a server
-
-```html file="./barajas/actualizar-dom/html-plain.html" 19:25
-```
-
-</Step>
-
-</CodeSurferColumns>
+<!-- NOT READY:
 
 ---
 
-<CodeSurfer theme={nightOwl}>
-
-```html
-<script>
-var lista = document.getElementById("lista");
-var nuevoElemento = document.createElement("li");
-var texto = document.createTextNode("Nuevo elemento");
-nuevoElemento.appendChild(texto);
-lista.appendChild(nuevoElemento);
-</script>
-```
-
-```html
-<script>
-var lista = document.getElementById("lista");
-var mas = fetch('https://frutas-frutas-frutas.com/api/frutas')
-	.then(response => response.json())
-	.catch(error => console.error('Error:', error));
-
-var nuevoElemento = document.createElement("li");
-var texto = document.createTextNode("Nuevo elemento");
-nuevoElemento.appendChild(texto);
-lista.appendChild(nuevoElemento);
-</script>
-```
-
-```html
-<script>
-var lista = document.getElementById("lista");
-var mas = fetch('https://frutas-frutas-frutas.com/api/frutas')
-	.then(response => response.json())
-	.catch(error => console.error('Error:', error));
-
-mas.map(function(fruta) {
-	var nuevoElemento = document.createElement("li");
-	var texto = document.createTextNode(fruta);
-	nuevoElemento.appendChild(texto);
-	lista.appendChild(nuevoElemento);
-});
-</script>
-```
-
-</CodeSurfer>
+<ActualizarDomCuatro />
 
 ---
+
+<ActualizarDomCinco />
+
+-->

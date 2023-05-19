@@ -1,0 +1,29 @@
+import { CodeSurferColumns, Step } from "code-surfer";
+import { vsDark, nightOwl} from "@code-surfer/themes";
+import { ListOne, ListTwo } from '../../components/List';
+
+<CodeSurferColumns themes={[nightOwl, vsDark]}>
+
+<Step>
+
+<ListTwo />
+
+```html
+<script>
+	var lista = document.getElementById("lista");
+	var mas = fetch('https://frutas-frutas-frutas.com/api/frutas')
+		.then(response => response.json())
+		.catch(error => console.error('Error:', error));
+
+	mas.map(function(fruta) {
+		var nuevoElemento = document.createElement("li");
+		var texto = document.createTextNode(fruta);
+		nuevoElemento.appendChild(texto);
+		lista.appendChild(nuevoElemento);
+	});
+</script>
+```
+
+</Step>
+
+</CodeSurferColumns>

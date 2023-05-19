@@ -1,0 +1,46 @@
+import { CodeSurfer } from "code-surfer";
+import { nightOwl} from "@code-surfer/themes";
+
+<CodeSurfer theme={nightOwl}>
+
+```html
+<script>
+	var lista = document.getElementById("lista");
+	var nuevoElemento = document.createElement("li");
+	var texto = document.createTextNode("Nuevo elemento");
+	nuevoElemento.appendChild(texto);
+	lista.appendChild(nuevoElemento);
+</script>
+```
+
+```html
+<script>
+	var lista = document.getElementById("lista");
+	var mas = fetch('https://frutas-frutas-frutas.com/api/frutas')
+		.then(response => response.json())
+		.catch(error => console.error('Error:', error));
+
+	var nuevoElemento = document.createElement("li");
+	var texto = document.createTextNode("Nuevo elemento");
+	nuevoElemento.appendChild(texto);
+	lista.appendChild(nuevoElemento);
+</script>
+```
+
+```html
+<script>
+	var lista = document.getElementById("lista");
+	var mas = fetch('https://frutas-frutas-frutas.com/api/frutas')
+		.then(response => response.json())
+		.catch(error => console.error('Error:', error));
+
+	mas.map(function(fruta) {
+		var nuevoElemento = document.createElement("li");
+		var texto = document.createTextNode(fruta);
+		nuevoElemento.appendChild(texto);
+		lista.appendChild(nuevoElemento);
+	});
+</script>
+```
+
+</CodeSurfer>

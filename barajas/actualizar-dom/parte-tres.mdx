@@ -1,0 +1,70 @@
+import { CodeSurferColumns, Step } from "code-surfer";
+import { vsDark, nightOwl} from "@code-surfer/themes";
+import { ListOne, ListTwo, ListThree } from '../../components/List'
+
+<CodeSurferColumns themes={[nightOwl, vsDark]}>
+
+<Step>
+
+<ListOne />
+
+```html file="./html-plain.html"
+```
+
+</Step>
+
+<Step>
+
+<ListTwo />
+
+```html file="./html-plain.html" 19:25
+```
+
+</Step>
+
+<Step>
+
+<ListThree />
+
+```html 19:25
+<html>
+  <head></head>
+  <body>
+    <div class="envase">
+      <h4>Comidas favoritas</h4>
+      <p>Frutas:</p>
+      <ul id="lista">
+        <li>Manzana</li>
+      </ul>
+    </div>
+    <style>
+      html { font-family: sans-serif; }
+      li { margin-bottom: 0.5rem; }
+      .envase {
+        margin: 100px auto;
+        width: 500px;
+      }
+    </style>
+    <script>
+      var lista = document.getElementById("lista");
+      var nuevoElemento = document.createElement("li");
+      var texto = document.createTextNode("Naranja");
+      nuevoElemento.appendChild(texto);
+      lista.appendChild(nuevoElemento); 👈
+    </script>
+  </body>
+</html>
+```
+
+</Step>
+
+<Step>
+
+### Up Next: <br/> we'll use the fetch API to get some data.
+
+```html file="./html-plain.html" 19:25
+```
+
+</Step>
+
+</CodeSurferColumns>
