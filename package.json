@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "uno": "mdx-deck ./barajas/actualizar-dom/lesson.mdx"
+  },
+  "devDependencies": {
+    "code-surfer": "3.1.0",
+    "mdx-deck": "3.0.13"
+  },
+  "name": "my-deck"
+}

@@ -1,0 +1,27 @@
+<html>
+  <head></head>
+  <body>
+    <div class="envase">
+      <h1>hola, mundo</h1>
+      <p>Mi Lista:</p>
+      <ul id="lista">
+        <li>Ejemplo</li>
+      </ul>
+    </div>
+    <style>
+      html { font-family: sans-serif; }
+      li { margin-bottom: 0.5rem; }
+      .envase {
+        margin: 100px auto;
+        width: 500px;
+      }
+    </style>
+    <script>
+      const lista = document.getElementById("lista");
+      var nuevoElemento = document.createElement("li");
+      var texto = document.createTextNode("Nuevo elemento");
+      nuevoElemento.appendChild(texto);
+      lista.appendChild(nuevoElemento);
+    </script>
+  </body>
+</html>

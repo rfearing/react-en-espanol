@@ -1,0 +1,49 @@
+import {
+  CodeSurfer,
+  CodeSurferColumns,
+  Step,
+} from "code-surfer";
+import { github, vsDark, nightOwl} from "@code-surfer/themes";
+import Primero from './partes/primero'
+import DiapositivaUno from './partes/diapositiva-uno'
+import DiapositivaTwo from './partes/diapositiva-two'
+import DiapositivaThree from './partes/diapositiva-three'
+import DiapositivaFour from './partes/diapositiva-four'
+
+export const theme = vsDark;
+
+<Primero />
+
+---
+
+<CodeSurferColumns themes={[vsDark, nightOwl]}>
+
+<Step>
+<DiapositivaUno />
+
+```html file="./partes/html-plain.html" 1:10,26:27
+```
+</Step>
+
+<Step>
+<DiapositivaTwo />
+
+```html file="./partes/html-plain.html" 11:18
+```
+</Step>
+
+<Step>
+<DiapositivaThree />
+
+```html file="./partes/html-plain.html" 19:25
+```
+</Step>
+
+<Step>
+<DiapositivaFour />
+
+```html file="./partes/html-plain.html" 20[21:43],21[27:48],22[19:41],23[21:31],24[13:23]
+```
+</Step>
+
+</CodeSurferColumns>
