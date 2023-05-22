@@ -1,38 +1,50 @@
 import { CodeSurferColumns, Step } from "code-surfer";
 import { vsDark, nightOwl } from "@code-surfer/themes";
 import Note from '../../components/Note'
+import Paragraph from '../../components/Note'
+import { ListOne } from '../../components/List'
 
 <Note>
 
-<p>
-	When you visit a website, your browser displays HTML, CSS and Javascript.</p>
+<p key="p1-1">1. Cuando visitas un sitio web, tu navegador muestra HTML, CSS y Javascript.</p>
+<p key="p1-2">2. HTML proporciona estructura y contenido,</p>
+<p key="p1-3">3. CSS proporciona estilos</p>
+<p key="p1-4">4. y por último, JavaScript proporciona interactividad.</p>
 
-- HTML provides structure and content,
-- CSS provides styles
-- and lastly JavaScript provides interactivity.
+<p key="p1-5">
+  5. Para hacer cambios en las páginas web, Javascript necesita un poco de ayuda. <br />
+  Afortunadamente, todos los navegadores modernos proporcionan a Javascript esta ayuda necesaria via Web APIs.
+</p>
 
-<p>
-	In order to make changes to webpages, Javascript needs a little help.
-	Luckily, all modern browsers provide Javascript with this necessary help via Web APIs.</p>
+<p key="p1-6">
+  Las Web APIs son un conjunto de herramientas que permiten a Javascript interactuar con el navegador y el usuario.
+</p>
 
-<p>
-	Web APIs are a set of tools that allow Javascript to interact with the browser and the user.</p>
+<p key="p1-7">
+  El API para manipular el DOM HTML, se llama "HTML DOM API".
+</p>
 
-<p>
-	The Web API to manipulate the HTML DOM is called the "HTML DOM API."</p>
-
-<p>
-	Some other Web APIs include the Fetch API, to make network connections and the URL API to structure and parse URLs.</p>
-
+<p key="p1-8">
+  Alugnos otros Web APIs incluyen el Fetch API, para hacer conexiones de red y el URL API para estructurar y analizar URLs.
+</p>
 </Note>
 
 <CodeSurferColumns themes={[nightOwl, vsDark]}>
 
 <Step>
 
+<ListOne />
+
+```html file="./html-plain.html"
+```
+
+</Step>
+
+<Step>
+
 <div>
   <h3>
-    Partes del web
+    Partes del sitios web
   </h3>
   <ul>
     <li>HTML</li>
@@ -42,7 +54,7 @@ import Note from '../../components/Note'
   </ul>
 </div>
 
-```html file="./html-plain.html" 1:10,26:27 subtitle="structure and content"
+```html file="./html-plain.html" 1:10,26:27 subtitle="estructura y contenido"
 ```
 
 </Step>
@@ -51,7 +63,7 @@ import Note from '../../components/Note'
 
 <div>
   <h3>
-    Partes del web
+    Partes del sitios web
   </h3>
   <ul>
     <li>HTML</li>
@@ -61,7 +73,7 @@ import Note from '../../components/Note'
   </ul>
 </div>
 
-```html file="./html-plain.html" 11:18 subtitle="styles"
+```html file="./html-plain.html" 11:18 subtitle="estilos"
 ```
 
 </Step>
@@ -70,7 +82,7 @@ import Note from '../../components/Note'
 
 <div>
   <h3>
-    Partes del web
+    Partes del sitios web
   </h3>
   <ul>
     <li>HTML</li>
@@ -80,7 +92,7 @@ import Note from '../../components/Note'
   </ul>
 </div>
 
-```html file="./html-plain.html" 19:25 subtitle="interactivity"
+```html file="./html-plain.html" 19:25 subtitle="interactividad"
 ```
 
 </Step>
@@ -89,7 +101,7 @@ import Note from '../../components/Note'
 
 <div>
   <h3>
-    Partes del web
+    Partes del sitios web
   </h3>
   <ul>
     <li>HTML</li>
@@ -99,7 +111,7 @@ import Note from '../../components/Note'
   </ul>
 </div>
 
-```html file="./html-plain.html" 20[21:43],21[27:48],22[19:41],23[21:31],24[13:23] subtitle="Set of tools that allow Javascript to interact with the browser and the user."
+```html file="./html-plain.html" 20[21:43],21[27:48],22[19:41],23[21:31],24[13:23] subtitle="herramientas para interactuar con el navegador y el usuario"
 ```
 
 </Step>

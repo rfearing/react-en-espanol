@@ -1,6 +1,6 @@
 # Lecciones de Javascript y React:
 
-**Esta listo:**
+**En curso:**
 1. Actualizar el DOM con JavaScript
 
 **No están listos:**

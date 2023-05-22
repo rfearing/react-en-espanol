@@ -1,6 +1,7 @@
 import { CodeSurferColumns, Step } from "code-surfer";
 import { vsDark, nightOwl} from "@code-surfer/themes";
 import { ListOne, ListTwo, ListThree } from '../../components/List'
+import { css } from '@emotion/css';
 
 <CodeSurferColumns themes={[nightOwl, vsDark]}>
 
@@ -60,7 +61,9 @@ import { ListOne, ListTwo, ListThree } from '../../components/List'
 
 <Step>
 
-### Up Next: <br/> we'll use the fetch API to get some data.
+<h3 className={css`margin: 1em`}>
+  A continuación: <br /> usaremos la API de fetch para obtener algunos datos.
+</h3>
 
 ```html file="./html-plain.html" 19:25
 ```

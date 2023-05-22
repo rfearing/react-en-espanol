@@ -1,6 +1,23 @@
 import { CodeSurferColumns, Step } from "code-surfer";
 import { github, vsDark, nightOwl} from "@code-surfer/themes";
 import { css } from '@emotion/css';
+import Note from '../../components/Note'
+import Paragraph from '../../components/Note'
+
+<Note>
+
+<p key="p2-1">1. Un escrito puede ser incluido en el ar<b>ch</b>ivo HTML de dos maneras.</p>
+<p key="p2-2">2. Puede ser colocado (placed) entre dos etiquetas de escrito (script tag),</p>
+<p key="p2-3">3. o puede ser colocado en un archivo separado y luego referenciado en el atributo SRC or "source tag" de la etiqueta escrito.</p>
+<p key="p2-4">4. Para declar variables, usamos la palabra clave "var", seguida del nombre de la variable. <br />En JavaScript moderno, esto ha cambiado, pero hablaremos de eso más tarde.</p>
+<p key="p2-5">5. El objeto "document" es una propiedad de la ventana y nos lo da el navegador.</p>
+<p key="p2-6">6. Él contiene muchos métodos que podemos usar para manipular el documento HTML. Por ejemplo</p>
+<p key="p2-7">7. Podemos usar el método "getElementById" para recuperar un elemento con un id específico. En este caso, nuestra lista.</p>
+<p key="p2-8">8. Podemos usar el método "createElement" para crear un nuevo elemento. En este caso, un elemento de lista.</p>
+<p key="p2-9">9. Podemos usar el método "createTextNode" para crear un nuevo nodo de texto</p>
+<p key="p2-10">10. Y finalmente podemos usar el método "appendChild" para agregar el elemento recién creado a la lista</p>
+
+</Note>
 
 <CodeSurferColumns themes={[nightOwl]}>
 
@@ -13,35 +30,49 @@ import { css } from '@emotion/css';
 
 <Step>
 
-```html file="./html-plain.html" 20[7:10],21[7:10],22[7:10] subtitle="declare variables"
+```html file="./html-plain.html" 19,25
 ```
 
 </Step>
 
 <Step>
 
-```html file="./html-plain.html" 20[19:26] subtitle="reference to the document contained in the browser window."
+```html file="./html-ext.html" 19
 ```
 
 </Step>
 
 <Step>
 
-```html file="./html-plain.html" 20[28:41],21[35:48],22[28:41] subtitle="methods of the document interface"
+```html file="./html-plain.html" 20[7:10],21[7:10],22[7:10] subtitle="declarar variables"
 ```
 
 </Step>
 
 <Step>
 
-```html file="./html-plain.html" 7,20 subtitle="retrieve unordered list with the id 'list'"
+```html file="./html-plain.html" 20[19:26] subtitle="referencia al documento contenido en la ventana del navegador"
 ```
 
 </Step>
 
 <Step>
 
-```html file="./html-plain.html" 21 subtitle="create an empty list item"
+```html file="./html-plain.html" 20[28:41],21[35:48],22[28:41] subtitle="métodos de la interfaz del documento"
+```
+
+</Step>
+
+<Step>
+
+```html file="./html-plain.html" 7,20 subtitle="elegir la lista desordenada con el id 'lista'"
+```
+
+</Step>
+
+<Step>
+
+```html file="./html-plain.html" 21 subtitle="crear nuevo listo vacía"
 ```
 
 </Step>
@@ -49,21 +80,21 @@ import { css } from '@emotion/css';
 
 <Step>
 
-```html file="./html-plain.html" 22 subtitle="create text with 'Naranja'"
+```html file="./html-plain.html" 22 subtitle="crear texto con 'Naranja'"
 ```
 
 </Step>
 
 <Step>
 
-```html file="./html-plain.html" 21[11:23],23[7:38] subtitle="add new text to new li"
+```html file="./html-plain.html" 21[11:23],23[7:38] subtitle="anadir texto al li"
 ```
 
 </Step>
 
 <Step>
 
-```html file="./html-plain.html" 24[7:38],20[11:16] subtitle="adds li to the list"
+```html file="./html-plain.html" 24[7:38],20[11:16] subtitle="anadir nuevo li a la lista"
 ```
 
 </Step>
