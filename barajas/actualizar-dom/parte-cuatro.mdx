@@ -1,5 +1,17 @@
 import { CodeSurfer } from "code-surfer";
 import { nightOwl} from "@code-surfer/themes";
+import Note from '../../components/Note'
+
+<Note>
+<p>0. Usando el mismo script, agreguemos otra API web.</p>
+<p>1. Usando la API Fetch, obtendremos una lista de frutas de un servidor remoto</p>
+<p>2. La palabra clave "then" nos dice que el servidor devuelve una "Promise" o "función asíncrona". <br />
+	También nos permite "esperar" a que la función termine.</p>
+<p>3. Se usa la palabra clave "catch" para manejar errores.</p>
+<p>4. Después de termine la función, tenemos una colección.</p>
+<p>5. Recorremos la matriz usando la función "mapa"</p>
+<p>6. e agregue cada elemento a la lista, con el mismo código que usamos antes.</p>
+</Note>
 
 <CodeSurfer theme={nightOwl}>
 
@@ -7,40 +19,47 @@ import { nightOwl} from "@code-surfer/themes";
 <script>
 	var lista = document.getElementById("lista");
 	var nuevoElemento = document.createElement("li");
-	var texto = document.createTextNode("Nuevo elemento");
+	var texto = document.createTextNode("Naranja");
 	nuevoElemento.appendChild(texto);
 	lista.appendChild(nuevoElemento);
 </script>
 ```
 
-```html
-<script>
-	var lista = document.getElementById("lista");
-	var mas = fetch('https://frutas-frutas-frutas.com/api/frutas')
-		.then(response => response.json())
-		.catch(error => console.error('Error:', error));
+```html file="./script.html" 3[15:66]
+```
 
-	var nuevoElemento = document.createElement("li");
-	var texto = document.createTextNode("Nuevo elemento");
-	nuevoElemento.appendChild(texto);
-	lista.appendChild(nuevoElemento);
-</script>
+```html file="./script.html" 4
+```
+
+```html file="./script.html" 5
+```
+
+```html file="./script-with-array.html" 3
 ```
 
 ```html
 <script>
 	var lista = document.getElementById("lista");
+	// ["piña", "fresas", "uvas"]
 	var mas = fetch('https://frutas-frutas-frutas.com/api/frutas')
 		.then(response => response.json())
 		.catch(error => console.error('Error:', error));
 
 	mas.map(function(fruta) {
-		var nuevoElemento = document.createElement("li");
-		var texto = document.createTextNode(fruta);
-		nuevoElemento.appendChild(texto);
-		lista.appendChild(nuevoElemento);
+
+
+
 	});
 </script>
+```
+
+```html file="./script-with-map.html" 3[9:14],10[55:61]
+```
+
+```html file="./script-with-map-two.html" 3[18:25],10[55:64]
+```
+
+```html file="./script-with-map-three.html" 3[27:33],10[55:61]
 ```
 
 </CodeSurfer>

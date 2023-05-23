@@ -1,0 +1,11 @@
+<script>
+	var lista = document.getElementById("lista");
+	var mas = fetch('https://frutas-frutas-frutas.com/api/frutas')
+		.then(response => response.json())
+		.catch(error => console.error('Error:', error));
+
+	var nuevoElemento = document.createElement("li");
+	var texto = document.createTextNode("Naranja");
+	nuevoElemento.appendChild(texto);
+	lista.appendChild(nuevoElemento);
+</script>

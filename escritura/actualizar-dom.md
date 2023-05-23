@@ -1,66 +1,44 @@
 # Actualizar el DOM con JavaScript:
 
-When you visit a website, your browser will display HTML, CSS & Javascript. HTML provides structure and content, CSS provides styles and lastly JavaScript provides interactivity.
 
-In order to make changes to HTML, we utilize a data representation of the HTML (instead of editing the HTML directly). This representation is called the DOM, which stands for Document Object Model. When we make changes to the DOM, they are reflected in the HTML.
+## Colección Uno
 
-In order to utilize the DOM, browsers provide "Web APIs" which give native functionality to Javascript. The Web API to manipulate the DOM is called the "HTML DOM API." Other Web APIs include the Fetch API, to make network connections and the URL API to structure and parse URLs.
+1. Cuando visitas un sitio web, tu navegador muestra HTML, CSS y Javascript.
+2. HTML proporciona estructura y contenido,
+3. CSS proporciona estilos
+4. y por último, JavaScript proporciona interactividad.
+5. Para hacer cambios en las páginas web, Javascript necesita un poco de ayuda.
+   - Afortunadamente, todos los navegadores modernos proporcionan a Javascript esta ayuda necesaria via Web APIs.
+   - Las Web APIs son un conjunto de herramientas que permiten a Javascript interactuar con el navegador y el usuario.
+   - El API para manipular el DOM HTML, se llama "HTML DOM API".
+   - Algunos otros Web APIs incluyen
+     - el Fetch API, para hacer conexiones de red y
+     - el URL API para estructurar y analizar URLs.
 
-Let’s take a look at how some of these would work:
+## Colección Dos
 
-<html>
-    <head></head>
-    <body>
-        <div id="app">
-            <h1>Develop. Preview. Ship. #</h1>
-            <p>My List:</p>
-            <ul id=”list”>
-              <li>Example</li>
-            </ul>
-        </div>
-        <script>// Javascript goes here</script>
-    </body>
-</html>
+1. Un escrito puede ser incluido en el ar<b>ch</b>ivo HTML de dos maneras.
+2. Puede ser colocado (placed) entre dos etiquetas de escrito (script tag),
+3. o puede ser colocado en un archivo separado y luego referenciado en el atributo SRC or "source tag" de la etiqueta escrito.
+4. Para declarar variables, usamos la palabra clave "var", seguida del nombre de la variable. <br />En JavaScript moderno, esto ha cambiado, pero hablaremos de eso más tarde.
+5. El objeto "document" es una propiedad de la ventana y nos lo da el navegador.
+6. Él contiene muchos métodos que podemos usar para manipular el documento HTML. Por ejemplo
+7. Podemos usar el método "getElementById" para recuperar un elemento con un id específico. En este caso, nuestra lista.
+8. Podemos usar el método "createElement" para crear un nuevo elemento. En este caso, un elemento de lista.
+9. Podemos usar el método "createTextNode" para crear un nuevo nodo de texto
+10. Y finalmente podemos usar el método "appendChild" para agregar el elemento recién creado a la lista
 
-<!-- Render here -->
+## Collection Tres
 
-Now we can use the HTML DOM API which gives us:
-- The `document` element and all the methods (functions) on that element, for example:
-  - `getElementById`
-  - `createElement`
-  - `createTextNode`
-  - `appendChild`
+Mostrar sin palabras
 
-<html>
-  <head></head>
-  <body>
-    <div class="envase">
-      <h1>hola, mundo</h1>
-      <p>Mi Lista:</p>
-      <ul id="lista">
-        <li>Ejemplo</li>
-      </ul>
-    </div>
-    <style>
-      html { font-family: sans-serif; }
-      li { margin-bottom: 0.5rem; }
+## Colección Cuatro
 
-      .envase {
-        margin: 100px auto;
-        width: 500px;
-      }
-    </style>
-    <script>
-      const lista = document.getElementById("lista");
-      var nuevoElemento = document.createElement("li");
-      var texto = document.createTextNode("Nuevo elemento");
-      nuevoElemento.appendChild(texto);
-      lista.appendChild(nuevoElemento);
-    </script>
-  </body>
-</html>
-
-And the resulting change is: [render html]
-
-Now, let’s utilize the fetch api in conjunction with what we just learned.
-
+0. Usando el mismo script, agreguemos otra API web.
+1. Usando la API Fetch, obtendremos una lista de frutas de un servidor remoto
+2. La palabra clave "then" nos dice que el servidor devuelve una "Promise" o "función asíncrona". <br />
+	También nos permite "esperar" a que la función termine.
+3. Se usa la palabra clave "catch" para manejar errores.
+4. Después de termine la función, tenemos una colección.
+5. Recorremos la matriz usando la función "mapa"
+6. e agregue cada elemento a la lista, con el mismo código que usamos antes.

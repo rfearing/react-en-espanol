@@ -1,0 +1,14 @@
+<script>
+	var lista = document.getElementById("lista");
+	// ["piña", "fresas", "uvas"]
+	var mas = fetch('https://frutas-frutas-frutas.com/api/frutas')
+		.then(response => response.json())
+		.catch(error => console.error('Error:', error));
+
+	mas.map(function(fruta) {
+		var nuevoElemento = document.createElement("li");
+		var texto = document.createTextNode(fruta); // "piña"
+		nuevoElemento.appendChild(texto);
+		lista.appendChild(nuevoElemento);
+	});
+</script>
